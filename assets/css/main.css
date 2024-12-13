@@ -12,7 +12,7 @@
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2a2c39;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #444444;
+  --accent-color: #FF8B00;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -467,7 +467,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: #231F20;
+  background-color: #2F2C79;
   font-size: 14px;
   text-align: center;
   padding: 10px 0;
@@ -681,7 +681,7 @@ section,
 
 .section-bg:before {
   content: "";
-  background-color: #2F2C79;
+  background-color: #171A4C;
   position: absolute;
   bottom: 60px;
   top: 60px;
@@ -937,6 +937,128 @@ section,
   transform: translate(5px, 0);
 }
 
+/*--------------------------------------------------------------
+# Tabs
+--------------------------------------------------------------*/
+
+.tabs img {
+  max-width: 80%;
+  border-radius: 20px;
+  height: auto;
+}
+
+
+.tabs .nav-tabs {
+  border: 0;
+}
+
+.tabs .nav-link {
+  border: 1px solid #b9b9b9;
+  padding: 15px;
+  transition: 0.3s;
+  color: #111111;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tabs .nav-link i {
+  padding-right: 15px;
+  font-size: 48px;
+}
+
+.tabs h3 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.tabs p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.tabs h3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #611926;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+
+
+
+.tabs span {
+  font-weight: bold;
+}
+
+.tabs .nav-link:hover {
+  color: #e03a3c;
+}
+
+.tabs .nav-link.active {
+  background: #e03a3c;
+  color: #fff;
+  border-color: #e03a3c;
+}
+
+@media (max-width: 768px) {
+  .tabs .nav-link i {
+    padding: 0;
+    line-height: 1;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  .tabs .nav-link {
+    padding: 15px;
+  }
+
+  .tabs .nav-link i {
+    font-size: 24px;
+  }
+}
+
+.tabs .tab-content {
+  margin-top: 30px;
+}
+
+.tabs .tab-pane h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.tabs .tab-pane ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tabs .tab-pane ul li {
+  padding-bottom: 10px;
+}
+
+.tabs .tab-pane ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #e03a3c;
+}
+
+.tabs .tab-pane p:last-child {
+  margin-bottom: 0;
+}
+
+
 
 /*--------------------------------------------------------------
 # Counts
@@ -1138,69 +1260,110 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# Our Services
 --------------------------------------------------------------*/
-.services .content h3 {
-  font-weight: 700;
-  font-size: 34px;
-  margin-bottom: 30px;
-  color: #231F20;
+.services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
 }
 
-.services .content p {
-  margin-bottom: 30px;
-  color: #231F20;
-
-}
-
-.services .content .services-btn {
-  padding: 8px 30px 9px 30px;
-  color: #231F20;
+.services .icon-box::before {
+  content: "";
+  position: absolute;
+  background: #171A4C;
+  right: -60px;
+  top: -40px;
+  width: 100px;
+  height: 100px;
   border-radius: 50px;
-  transition: 0.3s;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 13px;
-  display: inline-flex;
-  align-items: center;
-  border: 2px solid var(--accent-color);
+  transition: all 0.3s;
+  z-index: -1;
 }
 
-.services .content .services-btn i {
-  font-size: 16px;
-  padding-left: 5px;
+.services .icon-box:hover::before {
+  background: #171A4C;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
 }
 
-.services .content .services-btn:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+.services img {
+  margin: 0 auto 20px auto;
+  padding: 4px 4px 4px 4px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 
-.services .icon-box img {
-  height: 98px;
-  width: 98px;
-  margin-bottom: 5px;
+.services .icon i {
+  font-size: 36px;
+  line-height: 1;
+  color: #fff;
 }
 
-.services .icon-box h4 {
-  font-size: 20px;
+.services .title {
   font-weight: 700;
-  margin: 0 0 10px 0;
-}
-
-.services .icon-box h4 a {
-  color: #274F66;
-  transition: 0.3s;
-}
-
-.services .icon-box p {
+  margin-bottom: 15px;
   font-size: 15px;
-  color: #231F20;
-  margin-bottom: 0;
+  text-transform: uppercase;
+  background: #2F2C79;
+  border-radius: 15px;
+  color: #F6F6F6;
+  padding: 8px 8px 8px 8px;
 }
 
-.services .icon-box:hover h4 a {
-  color: var(--accent-color);
+.services .title a {
+  color: #ffffff;
+}
+
+.services .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+
+.services a {
+  margin-top: 30px;
+  position: relative;
+  background: #2F2C79;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.services a:hover {
+  background: #FF8B00;
+  border-color: #ffffff;
+  color: #fff;
+}
+
+.services .icon-box:hover .title a,
+.services .icon-box:hover .description,
+.services .icon-box:hover h4 {
+  color: #fff;
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .icon-box:hover .icon i {
+  color: #7b353c;
 }
 
 
