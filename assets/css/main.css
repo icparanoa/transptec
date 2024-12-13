@@ -1069,6 +1069,7 @@ section,
   width: 100%;
   background: #fff;
   border-radius: 15px;
+  margin-bottom: 15px;
 }
 
 .counts .count-box span {
