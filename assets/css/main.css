@@ -1295,6 +1295,10 @@ section,
   border-radius: 0px;
 }
 
+.service .icon-box h4{
+
+}
+
 .services img {
   margin: 0 auto 20px auto;
   padding: 4px 4px 4px 4px;
@@ -1314,13 +1318,14 @@ section,
 }
 
 .services .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 15px;
+  text-align: center;
   text-transform: uppercase;
-  background: #2F2C79;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
   border-radius: 15px;
-  color: #F6F6F6;
+  color: #000020;
   padding: 8px 8px 8px 8px;
 }
 
