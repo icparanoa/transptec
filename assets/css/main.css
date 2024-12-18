@@ -1544,10 +1544,11 @@ section,
 }
 
 .info-box .content_fim {
-  padding: 0px 100px 0 100px;
+  padding: 0px 100px 0px 100px;
 }
 
-.info-box .content h3 {
+.info-box .content h3,
+.icon-box .content_fim h3 {
   font-weight: 400;
   font-size: 36px;
   font-family: Waffle;
@@ -1559,17 +1560,11 @@ section,
   margin-top: 5px;
 }
 
-
-
 .info-box .img-fluid {
   box-shadow: 11px 5px 25px 0px rgba(0, 0, 0, 0.75);
   border-radius: 15px;
   background-repeat: no-repeat;
   margin-bottom: 30px;
-}
-
-.info-box .sub-text {
-  padding: 0px 100px 55px 100px;
 }
 
 .info-box .accordion-list {
@@ -1650,7 +1645,8 @@ section,
 @media (max-width: 1024px) {
 
   .info-box .content,
-  .info-box .accordion-list {
+  .info-box .accordion-list,
+  .info-box .content_fim {
     padding-left: 0;
     padding-right: 0;
   }
