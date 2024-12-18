@@ -22,7 +22,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;
+  --nav-color: #2F2C79;
   /* The default color of the main navmenu links */
   --nav-hover-color: #FF8B00;
   /* Applied to main navmenu links when they are hovered over or active */
@@ -44,7 +44,7 @@
 }
 
 .dark-background {
-  --background-color: #2a2c39;
+  --background-color: #2F2C79;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #404356;
@@ -151,7 +151,7 @@ h6 {
 }
 
 .header .topbar {
-  background-color: #274f66;
+  background-color: #171A4C;
   height: 40px;
   padding: 0;
   font-size: 14px;
@@ -467,7 +467,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: #2F2C79;
+  background-color: #171A4C;
   font-size: 14px;
   text-align: center;
   padding: 10px 0;
@@ -673,6 +673,9 @@ section,
   overflow: clip;
 }
 
+
+
+
 .section-bg {
   background-color: transparent;
   padding: 160px 0;
@@ -698,7 +701,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -730,6 +733,17 @@ section,
   font-weight: 700;
   text-transform: uppercase;
   font-family: var(--heading-font);
+}
+
+.section-title p::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: #ff8b00;
+  bottom: 0;
+  margin-bottom: 25px;
 }
 
 /*--------------------------------------------------------------
@@ -990,7 +1004,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: #611926;
+  background: #ff8b00;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -1296,8 +1310,6 @@ section,
   border-radius: 0px;
 }
 
-.service .icon-box h4 {}
-
 .services img {
   margin: 0 auto 20px auto;
   padding: 4px 4px 4px 4px;
@@ -1523,10 +1535,12 @@ section,
 # Info Box
 --------------------------------------------------------------*/
 .info-box {
+  margin-top: 130px;
   padding-bottom: 55px;
 }
+
 .info-box .content {
-  padding: 60px 100px 0 100px;
+  padding: 0px 100px 0px 100px;
 }
 
 .info-box .content_fim {
@@ -1545,10 +1559,7 @@ section,
   margin-top: 5px;
 }
 
-.info-box .content p {
-  font-size: 14px;
-  color: #000000;
-}
+
 
 .info-box .img-fluid {
   box-shadow: 11px 5px 25px 0px rgba(0, 0, 0, 0.75);
@@ -1557,8 +1568,8 @@ section,
   margin-bottom: 30px;
 }
 
-.info-box .sub-text{
-    padding: 0px 100px 55px 100px;
+.info-box .sub-text {
+  padding: 0px 100px 55px 100px;
 }
 
 .info-box .accordion-list {
@@ -1666,8 +1677,12 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item+.info-item {
-  margin-top: 40px;
+.contact iframe {
+  box-shadow: 11px 5px 25px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  border: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .contact .info-item i {
@@ -1684,7 +1699,7 @@ section,
   margin-right: 15px;
 }
 
-.contact .info-item h3 {
+con .contact .info-item h3 {
   padding: 0;
   font-size: 18px;
   font-weight: 700;
@@ -2051,6 +2066,89 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact {
+  background: url("../img/fundo.png") fixed no-repeat center;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.contact .info {
+  width: 100%;
+}
+
+.contact .info i {
+  font-size: 20px;
+  background: #171A4C;
+  color: #fff;
+  float: left;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--cinza-escuro);
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--azul-claro);
+}
+
+.contact .info a {
+  color: var(--azul-claro);
+}
+
+.contact .info a:hover {
+  color: #D3A134;
+}
+
+.contact .info .email,
+.contact .info .phone {
+  margin-top: 40px;
+}
+
+.contact button {
+  background: #14264f;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact button:hover {
+  background: #07d800;
+  border-color: #07d800;
+  color: #fff;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Starter Section Section
