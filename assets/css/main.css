@@ -694,7 +694,7 @@ section,
 
 .section-bg:before {
   content: "";
-  background-color: #171A4C;
+  background-color: #045cb4;
   position: absolute;
   bottom: 60px;
   top: 60px;
@@ -1316,7 +1316,7 @@ section,
 }
 
 .services .icon-box:hover::before {
-  background: #171A4C;
+  background: #045cb4;
   right: 0;
   top: 0;
   width: 100%;
