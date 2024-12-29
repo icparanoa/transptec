@@ -1,7 +1,17 @@
 /* Fonts */
+@font-face {
+  font-family: Garet;
+  src: url(../fonts/Garet-Book.ttf);
+}
+
+@font-face {
+  font-family: Garet_body;
+  src: url(../fonts/Garet-Heavy.ttf);
+}
+
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway", sans-serif;
+  --default-font: Garet;
+  --heading-font: Garet_body;
   --nav-font: "Poppins", sans-serif;
 }
 
@@ -951,6 +961,10 @@ section,
   transform: translate(5px, 0);
 }
 
+.about h3{
+  font-family: var(--heading-font);
+}
+
 /*--------------------------------------------------------------
 # Tabs
 --------------------------------------------------------------*/
@@ -1549,9 +1563,9 @@ section,
 
 .info-box .content h3,
 .icon-box .content_fim h3 {
-  font-weight: 400;
-  font-size: 36px;
-  font-family: Waffle;
+  font-weight: 300;
+  font-size: 32px;
+  font-family: var(--heading-font);
 }
 
 .info-box .content h4 {
